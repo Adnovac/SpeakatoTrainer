@@ -1,5 +1,5 @@
 import datetime
-from trainer import SpeakatoTrainer
+from SpeakatoTrainer import SpeakatoTrainer
 
 model_path = f"../models/Speakato_model_{datetime.datetime.now().timestamp()}"
 dataset_path = f"../dataset/training_data.json"
@@ -25,3 +25,4 @@ print(f"""
 """)
 
 speakato_trainer = SpeakatoTrainer(language, model_path, dataset_path)
+speakato_trainer.train()

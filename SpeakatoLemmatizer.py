@@ -1,10 +1,10 @@
 import spacy
+
 class SpeakatoLemmatizer:
     global lemmatizer
 
     def __init__(language: str):
         global lemmatizer
-
         language = language.lower()
         if(language not in ["pl", "eng"]):
             raise Exception("Language not available. Supported languages: PL/ENG")

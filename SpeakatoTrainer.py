@@ -1,4 +1,5 @@
-from lemma import SpeakatoLemmatizer
+from SpeakatoLemmatizer import SpeakatoLemmatizer
+import os.path as path
 
 class SpeakatoTrainer:
     global speakato_lemma
@@ -20,7 +21,11 @@ class SpeakatoTrainer:
         dataset_path = dataset
 
         language = language.lower()
+        if(path.exists(model_path)):
+            raise Exception("There's al")
         if(language not in ["pl", "eng"]):
             raise Exception("Language not available. Supported languages: PL/ENG")
-
+        
         speakato_lemma = SpeakatoLemmatizer(language)
+
+    def train(self):
