@@ -2,7 +2,7 @@ import datetime
 from SpeakatoTrainer import SpeakatoTrainer
 
 model_path = f"../models/Speakato_model_{datetime.datetime.now().timestamp()}"
-dataset_path = f"../dataset/training_data.json"
+dataset_path = f"../dataset"
 language = "pl"
 
 print("Welcome to speakato trainer! Before we start, let's configure some neccessary stuff!")
@@ -22,6 +22,7 @@ print(f"""
     Config summary:
     Model path: {model_path}
     Dataset path: {dataset_path}
+    Language: {language}
 """)
 
 speakato_trainer = SpeakatoTrainer(language, model_path, dataset_path)
