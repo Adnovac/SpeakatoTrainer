@@ -1,0 +1,13 @@
+name: PBR_Test
+on: [push]
+jobs:
+  hello-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2.2.2
+        with:
+            python-version: '3.7'
+      - run: python3 --version
