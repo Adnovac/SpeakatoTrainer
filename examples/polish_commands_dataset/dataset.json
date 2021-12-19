@@ -1,0 +1,66 @@
+[
+    {
+        "text": "Dzień dobry",
+        "command": "greeting"
+    },
+    {
+        "text": "Cześć",
+        "command": "greeting"
+    },
+    {
+        "text": "Hej",
+        "command": "greeting"
+    },
+    {
+        "text": "Siema",
+        "command": "greeting"
+    },
+    {
+        "text": "Elo, co tam",
+        "command": "greeting"
+    },
+    {
+        "text": "Otwórz aplikację spotify",
+        "command": "open"
+    },
+    {
+        "text": "Włącz chrome",
+        "command": "open"
+    },
+    {
+        "text": "Otwórz notatnik",
+        "command": "open"
+    },
+    {
+        "text": "Włącz mi aplikacje notatnik",
+        "command": "open"
+    },
+    {
+        "text": "Uruchom przeglądarkę",
+        "command": "open"
+    },
+    {
+        "text": "Zamknij okno",
+        "command": "close"
+    },
+    {
+        "text": "Zamknij aplikację",
+        "command": "close"
+    },
+    {
+        "text": "Wyłącz aplikację",
+        "command": "close"
+    },
+    {
+        "text": "Nastaw budzik na ośmą rano",
+        "command": "alarm"
+    },
+    {
+        "text": "Obudź mnie o czwartej rano",
+        "command": "alarm"
+    },
+    {
+        "text": "Włącz alarm na siedemnastą",
+        "command": "alarm"
+    }
+]
