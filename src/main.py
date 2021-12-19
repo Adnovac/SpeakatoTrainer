@@ -1,8 +1,8 @@
 import datetime
-from trainer import SpeakatoTrainer
+from SpeakatoTrainer import SpeakatoTrainer
 
-model_path = f"../models/Speakato_model_{datetime.datetime.now().timestamp()}"
-dataset_path = f"../dataset/training_data.json"
+model_path = f"../models/Speakato_model_{datetime.datetime.now().date()}"
+dataset_path = f"../dataset"
 language = "pl"
 
 print("Welcome to speakato trainer! Before we start, let's configure some neccessary stuff!")
@@ -15,13 +15,18 @@ if new_path:
     dataset_path = new_path
 
 new_language = input(f"What language you want to use (pl/eng)? Default language: {language}")
-if(new_language not in ["pl", "eng"]):
+if new_language:
     language = new_language
 
 print(f"""
     Config summary:
     Model path: {model_path}
     Dataset path: {dataset_path}
+    Language: {language}
 """)
 
 speakato_trainer = SpeakatoTrainer(language, model_path, dataset_path)
+
+print("Starting training...")
+speakato_trainer.train()
+speakato_trainer.save()

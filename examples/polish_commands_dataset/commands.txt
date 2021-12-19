@@ -1,0 +1,4 @@
+greeting
+open
+close
+alarm
