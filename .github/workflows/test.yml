@@ -16,8 +16,5 @@ jobs:
         run: python3 -m pip install -r requirements.txt
       - name: Install spacy_models
         run: python3 -m spacy download pl_core_news_sm
-  train-model:
-    needs: [configure]
-    runs-on: windows-latest
-    steps:
-      - python main.py --language pl --dataset .\examples\polish_commands_dataset\ --model .\models\test
+      - name: Train model
+        run: python src/main.py --language pl --dataset .\examples\polish_commands_dataset\ --model .\models\test
