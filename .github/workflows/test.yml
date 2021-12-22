@@ -1,13 +1,20 @@
-name: PBR_Test
+name: SpeakatoTrainer_ModelTraining
 on: [push]
 jobs:
-  hello-job:
-    runs-on: ubuntu-latest
+  configure:
+    name: "Configure and isntall packages"
+    runs-on: windows-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
       - name: Setup Python
-        uses: actions/setup-python@v2.2.2
+        uses: actions/setup-python@v2
         with:
             python-version: '3.7'
       - run: python3 --version
+      - name: Install packages
+        run: python3 -m pip install -r requirements.txt
+      - name: Install spacy_models
+        run: python3 -m spacy download pl_core_news_sm
+      - name: Train model
+        run: python src/main.py --language pl --dataset .\examples\polish_commands_dataset\ --model .\models\test
