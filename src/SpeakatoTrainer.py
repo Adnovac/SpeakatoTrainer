@@ -31,17 +31,12 @@ class SpeakatoTrainer:
         global lang
         global model_info
 
+        self.check_initial_data(language,model,dataset)
+
         dataset_path = dataset
-        if(not os.path.exists(dataset_path)):
-            raise Exception(f"Dataset: {dataset_path} doesn't exists!")
-
         model_path = model
-        if(os.path.exists(model_path)):
-            raise Exception(f"Model: {model_path} already exists!")
-        os.makedirs(model_path)
 
-        if(language not in ["pl", "eng"]):
-            raise Exception("Language not available. Supported languages: pl/eng")
+        os.makedirs(model_path)
 
         if(language == "eng"):
             lemmatizer = "en_core_web_sm"
@@ -55,6 +50,16 @@ class SpeakatoTrainer:
         nlp = spacy.load(lemmatizer)
         self.load_dataset(dataset_path)
         
+
+    def check_initial_data(self, language: str, model_path: str, dataset_path: str):
+        if(not os.path.exists(dataset_path)):
+            raise Exception(f"Dataset: {dataset_path} doesn't exists!")
+
+        if(os.path.exists(model_path)):
+            raise Exception(f"Model: {model_path} already exists!")
+
+        if(language not in ["pl", "eng"]):
+            raise Exception("Language not available. Supported languages: pl/eng")
 
     def load_dataset(self, dataset_path: str):
         global labels
