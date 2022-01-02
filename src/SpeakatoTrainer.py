@@ -77,7 +77,6 @@ class SpeakatoTrainer:
             labels = sorted([x.rstrip("\n") for x in f.readlines()])
         data = pd.read_json(f"{dataset_path}/dataset.json")
         data["text"] = self.clean_data(data["text"])
-        print(data["text"])
         X = np.array([nlp(x).vector for x in data["text"]])
         y = pd.get_dummies(data[["command"]]).values
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, shuffle=True)
