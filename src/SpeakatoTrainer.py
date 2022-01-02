@@ -1,19 +1,13 @@
 from sklearn.model_selection import train_test_split
 import os
 import spacy
+from spacy.lang.en.stop_words import STOP_WORDS
 import pandas as pd
 import numpy as np
 import json
 from keras.models import Sequential
 from keras.layers import Dense
 import re
-import string
-from nltk.tokenize import word_tokenize
-#from nltk.corpus import stopwords #Maybe usefull for english
-
-from stop_words import get_stop_words
-from spacy.lang.en.stop_words import STOP_WORDS
-
 
 class SpeakatoTrainer:
     global nlp
@@ -83,6 +77,7 @@ class SpeakatoTrainer:
             labels = sorted([x.rstrip("\n") for x in f.readlines()])
         data = pd.read_json(f"{dataset_path}/dataset.json")
         data["text"] = self.clean_data(data["text"])
+        print(data["text"])
         X = np.array([nlp(x).vector for x in data["text"]])
         y = pd.get_dummies(data[["command"]]).values
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, shuffle=True)
@@ -93,28 +88,14 @@ class SpeakatoTrainer:
         """
         Constructs a new SpeakatoTrainer
         :param texts: list of sentences in form of strings.
-
-        WARNING: English version is still WIP due to lack of english test dataset
         """
         final_texts = list()
 
         for text in texts:
             text = text.lower()
             text = re.sub(r"[,.\"!@#$%^&*(){}?/;`~:<>+=-]", "", text)
-
-            tokens = word_tokenize(text)
-            table = str.maketrans('', '', string.punctuation)
-            words = [w.translate(table) for w in tokens]           
-
-            if(language_selected == "pl"):
-                stop_words = get_stop_words('pl')
-            elif(language_selected == 'eng'): #WIP. missing data
-                stop_words = get_stop_words('en')
-
-            words = [w for w in words if not w in stop_words]
-            nlp_data = ' '.join(words)
-            doc = nlp(nlp_data)
-            words = " ".join([token.lemma_ for token in doc])
+            words = [w.lemma_ for w in nlp(text) if not w.lemma_ in nlp.Defaults.stop_words]
+            words = ' '.join(words)
 
             final_texts.append(words)
 
