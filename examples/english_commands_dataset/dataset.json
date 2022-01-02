@@ -1,0 +1,18 @@
+[
+    {
+        "text": "Hello",
+        "command": "greeting"
+    },
+    {
+        "text": "Open the spotify app",
+        "command": "open"
+    },
+    {
+        "text": "Close the window",
+        "command": "close"
+    },
+    {
+        "text": "Set an alarm on 5 o'clock",
+        "command": "alarm"
+    }
+]
