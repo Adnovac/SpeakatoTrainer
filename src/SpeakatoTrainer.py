@@ -8,6 +8,8 @@ import json
 from keras.models import Sequential
 from keras.layers import Dense
 import re
+import onnx
+import tf2onnx
 
 class SpeakatoTrainer:
     global nlp
@@ -133,3 +135,6 @@ class SpeakatoTrainer:
         formatted_config = json.dumps(model_info, indent=4)
         with open(f"{model_path}/info.json", "w+") as f:
             f.write(formatted_config)
+
+        onnx_model, _ = tf2onnx.convert.from_keras(model)
+        onnx.save_model(onnx_model, f"{model_path}/model.onnx")
