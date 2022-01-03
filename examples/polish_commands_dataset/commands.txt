@@ -2,3 +2,7 @@ greeting
 open
 close
 alarm
+write
+save
+create
+cd

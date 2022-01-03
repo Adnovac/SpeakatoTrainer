@@ -4,6 +4,10 @@
         "command": "greeting"
     },
     {
+        "text": "Dobry wieczór",
+        "command": "greeting"
+    },
+    {
         "text": "Cześć",
         "command": "greeting"
     },
@@ -20,7 +24,39 @@
         "command": "greeting"
     },
     {
+        "text": "Witaj",
+        "command": "greeting"
+    },
+    {
+        "text": "Witam",
+        "command": "greeting"
+    },
+    {
+        "text": "Czołem",
+        "command": "greeting"
+    },
+    {
+        "text": "Joł",
+        "command": "greeting"
+    },
+    {
+        "text": "Jak się masz",
+        "command": "greeting"
+    },
+    {
         "text": "Otwórz aplikację spotify",
+        "command": "open"
+    },
+    {
+        "text": "Uruchom grę",
+        "command": "open"
+    },
+    {
+        "text": "Otwórz menadżera zadań",
+        "command": "open"
+    },
+    {
+        "text": "Uruchom wiersz poleceń",
         "command": "open"
     },
     {
@@ -40,7 +76,35 @@
         "command": "open"
     },
     {
+        "text": "Uruchom kalkulator",
+        "command": "open"
+    },
+    {
+        "text": "Odpal kalkulator",
+        "command": "open"
+    },
+    {
+        "text": "Otwórz panel sterowania",
+        "command": "open"
+    },
+    {
+        "text": "Otwórz ustawienia systemu",
+        "command": "open"
+    },
+    {
+        "text": "Otwórz galerię zdjęć",
+        "command": "open"
+    },
+    {
         "text": "Zamknij okno",
+        "command": "close"
+    },
+    {
+        "text": "Zamknij folder",
+        "command": "close"
+    },
+    {
+        "text": "Zamknij ten plik",
         "command": "close"
     },
     {
@@ -62,5 +126,77 @@
     {
         "text": "Włącz alarm na siedemnastą",
         "command": "alarm"
+    },
+    {
+        "text": "Uruchom alarm na dziesiątą rano",
+        "command": "alarm"
+    },
+    {
+        "text": "Ustaw budzik na dziewiątą",
+        "command": "alarm"
+    },
+    {
+        "text": "Zrób notatkę",
+        "command": "write"
+    },
+    {
+        "text": "Zanotuj mi ten tekst",
+        "command": "write"
+    },
+    {
+        "text": "Zanotuj tekst",
+        "command": "write"
+    },
+    {
+        "text": "Napisz polecenie w terminalu",
+        "command": "write"
+    },
+    {
+        "text": "Zapisz plik",
+        "command": "save"
+    },
+    {
+        "text": "Zapisz mi ten plik",
+        "command": "save"
+    },
+    {
+        "text": "Zapisz zmiany",
+        "command": "save"
+    },
+    {
+        "text": "Zatwierdź zmiany",
+        "command": "save"
+    },
+    {
+        "text": "Nadpisz plik",
+        "command": "save"
+    },
+    {
+        "text": "Utwórz nowy plik",
+        "command": "create"
+    },
+    {
+        "text": "Utwórz nowy folder",
+        "command": "create"
+    },
+    {
+        "text": "Stwórz nowy plik",
+        "command": "create"
+    },
+    {
+        "text": "Stwórz nowy folder",
+        "command": "create"
+    },
+    {
+        "text": "Wejdź do folderu",
+        "command": "cd"
+    },
+    {
+        "text": "Otwórz folder",
+        "command": "cd"
+    },
+    {
+        "text": "Wróć do folderu",
+        "command": "cd"
     }
 ]
