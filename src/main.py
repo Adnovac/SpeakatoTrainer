@@ -3,18 +3,27 @@ import argparse
 from SpeakatoTrainer import SpeakatoTrainer
 
 parser = argparse.ArgumentParser()
+parser.add_argument("-md", "--mode", dest ="mode", help="")
 parser.add_argument("-m", "--model", dest = "model", default = "", help="Model path")
 parser.add_argument("-d", "--dataset", dest = "dataset", default = "", help="Dataset path")
 parser.add_argument("-l", "--language", dest ="language", help="")
 args = parser.parse_args()
 
 model_path = f"models/Speakato_model_{datetime.datetime.now().date()}"
-dataset_path = f"dataset"
+dataset_path = f"examples\polish_commands_dataset"
 language = "pl"
+mode = "1"
 
 if not args.model:
     print("Welcome to speakato trainer! Before we start, let's configure some neccessary stuff!")
-    new_path = input(f"Where do you want to save your model? Default path: {model_path}\nType:")
+    mode_input = input(f"What do you want to do? Mode 1: Create model, Mode 2: add new data to previously created model. Default mode: {mode}\nType:")
+    if mode_input:
+        mode = mode_input
+else:
+    mode = args.mode
+
+if not args.model:
+    new_path = input(f"Where do you want to save your model/where did you save your model? Default path: {model_path}\nType:")
     if new_path:
         model_path = new_path
 else:
@@ -28,7 +37,7 @@ else:
     dataset_path = args.dataset
 
 if not args.language:
-    new_language = input(f"What language you want to use (pl/eng)? Default language: {language}\nType:")
+    new_language = input(f"What language you want to use (pl/eng)/did you use in previously trained model? Default language: {language}\nType:")
     if new_language:
         language = new_language
 else:
@@ -36,12 +45,13 @@ else:
 
 print(f"""
     Config summary:
+    Mode: {mode}
     Model path: {model_path}
     Dataset path: {dataset_path}
     Language: {language}
 """)
 
-speakato_trainer = SpeakatoTrainer(language, model_path, dataset_path)
+speakato_trainer = SpeakatoTrainer(language, model_path, dataset_path, mode)
 
 print("Starting training...")
 speakato_trainer.train()
