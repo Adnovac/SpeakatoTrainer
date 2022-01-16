@@ -3,10 +3,10 @@ import argparse
 from SpeakatoTrainer import SpeakatoTrainer
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-md", "--mode", dest ="mode", help="")
 parser.add_argument("-m", "--model", dest = "model", default = "", help="Model path")
 parser.add_argument("-d", "--dataset", dest = "dataset", default = "", help="Dataset path")
 parser.add_argument("-l", "--language", dest ="language", help="")
+parser.add_argument("-md", "--mode", dest ="mode", help="")
 args = parser.parse_args()
 
 model_path = f"models/Speakato_model_{datetime.datetime.now().date()}"

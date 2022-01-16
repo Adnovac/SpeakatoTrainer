@@ -160,3 +160,7 @@ class SpeakatoTrainer:
 
         onnx_model, _ = tf2onnx.convert.from_keras(model)
         onnx.save_model(onnx_model, f"{model_path}/model.onnx")
+
+    def predict(self,X):
+        Predict = nlp(X).vector
+        y_predicted = model(Predict)

@@ -17,4 +17,4 @@ jobs:
       - name: Install spacy_models
         run: python3 -m spacy download pl_core_news_sm
       - name: Train model
-        run: python src/main.py --language pl --dataset .\examples\polish_commands_dataset\ --model .\models\test
+        run: python src/main.py --language pl --dataset .\examples\polish_commands_dataset\ --model .\models\test --mode 1
