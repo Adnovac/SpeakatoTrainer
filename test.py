@@ -75,7 +75,25 @@ class TestExceptions(unittest.TestCase):
          if os.path.exists(modelPath):
             os.chmod(modelPath, stat.S_IWRITE)
             shutil.rmtree(modelPath)
-    
+
+class TestModel(unittest.TestCase): 
+    test_5_model_path = f"models/Speakato_model_{datetime.datetime.now().date()}_test_1"
+    polish_dataset_path = f"examples\polish_commands_dataset"
+    test_language = "pl"
+    test_mode = "1"
+
+    def test_model_output(self):
+        self.delete_folder(self.test_5_model_path)
+
+        speakato_trainer = SpeakatoTrainer.SpeakatoTrainer(self.test_language, self.test_5_model_path , self.polish_dataset_path, self.test_mode)
+        speakato_trainer.train()
+        result = speakato_trainer.predict("Hej")
+        self.assertEqual(result, 4)
+
+    def delete_folder(self, modelPath : str):
+         if os.path.exists(modelPath):
+            os.chmod(modelPath, stat.S_IWRITE)
+            shutil.rmtree(modelPath)
 
 if __name__ == '__main__':
     unittest.main()

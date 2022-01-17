@@ -161,6 +161,9 @@ class SpeakatoTrainer:
         onnx_model, _ = tf2onnx.convert.from_keras(model)
         onnx.save_model(onnx_model, f"{model_path}/model.onnx")
 
-    def predict(self,X):
-        Predict = nlp(X).vector
+    def predict(self,X ):
+        Predict = np.array([nlp(x).vector for x in [X]])
         y_predicted = model(Predict)
+        recognized_index = y_predicted[0].numpy().tolist().index(max(y_predicted[0]))
+
+        return recognized_index
