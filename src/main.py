@@ -14,7 +14,7 @@ dataset_path = f"examples\polish_commands_dataset"
 language = "pl"
 mode = "1"
 
-if not args.model:
+if not args.mode:
     print("Welcome to speakato trainer! Before we start, let's configure some neccessary stuff!")
     mode_input = input(f"What do you want to do? Mode 1: Create model, Mode 2: add new data to previously created model. Default mode: {mode}\nType:")
     if mode_input:
@@ -29,7 +29,7 @@ if not args.model:
 else:
     model_path = args.model
 
-if not args.model:
+if not args.dataset:
     new_path = input(f"Where is dataset? Default path: {dataset_path}\nType:")
     if new_path:
         dataset_path = new_path
