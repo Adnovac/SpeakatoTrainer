@@ -1,3 +1,4 @@
+from pyexpat import model
 from sklearn.model_selection import train_test_split
 import os
 import spacy
@@ -7,6 +8,7 @@ import numpy as np
 import json
 from keras.models import Sequential
 from keras.layers import Dense
+from keras.models import load_model
 import re
 import onnx
 import tf2onnx
@@ -22,7 +24,7 @@ class SpeakatoTrainer:
     global y_test
     global model_info
 
-    def __init__(self, language: str, model: str, dataset: str):
+    def __init__(self, language: str, model: str, dataset: str, mode: str):
         """
         Constructs a new SpeakatoTrainer
         :param language: Supported language
@@ -33,16 +35,19 @@ class SpeakatoTrainer:
         global model_path
         global dataset_path
         global lang
+        global selected_mode
         global model_info
         global language_selected
 
-        self.check_initial_data(language,model,dataset)
+        self.check_initial_data(language,model,dataset,mode)
 
         dataset_path = dataset
         model_path = model
         language_selected = language
+        selected_mode = mode
 
-        os.makedirs(model_path)
+        if(selected_mode == "1"):
+            os.makedirs(model_path)
 
         if(language == "eng"):
             spacy_model = "en_core_web_sm"
@@ -57,15 +62,18 @@ class SpeakatoTrainer:
         self.load_dataset(dataset_path)
         
 
-    def check_initial_data(self, language: str, model_path: str, dataset_path: str):
+    def check_initial_data(self, language: str, model_path: str, dataset_path: str, selected_mode : str):
         if(not os.path.exists(dataset_path)):
             raise Exception(f"Dataset: {dataset_path} doesn't exists!")
 
-        if(os.path.exists(model_path)):
+        if(os.path.exists(model_path) and selected_mode == "1"):
             raise Exception(f"Model: {model_path} already exists!")
 
         if(language not in ["pl", "eng"]):
-            raise Exception("Language not available. Supported languages: pl/eng")
+            raise Exception("Language not available! Supported languages: pl/eng")
+
+        if(selected_mode not in ["1", "2"]):
+            raise Exception("Wrong mode selected! Supported modes: Mode 1: Create model, Mode 2: add new data to previously created model")
 
 
     def load_dataset(self, dataset_path: str):
@@ -104,8 +112,7 @@ class SpeakatoTrainer:
         return final_texts
     
 
-    def train(self):
-        global model
+    def building_model(self):
         model = Sequential()
         model.add(Dense(500, activation='relu', input_dim=len(X_train[0])))
         model.add(Dense(100, activation='relu'))
@@ -115,8 +122,23 @@ class SpeakatoTrainer:
         model.compile(optimizer='adam', 
                     loss='categorical_crossentropy', 
                     metrics=['accuracy'])
+        
+        return model
 
-        model.fit(X_train, y_train, epochs=20)
+    def load_model(self):
+        model = load_model(f"{model_path}/model")
+
+        return model
+
+    def train(self):
+        global model
+        if(selected_mode == "1"):
+            model = self.building_model()
+        elif(selected_mode == "2"):
+            model = self.load_model()
+
+        model.fit(X_train,y_train, epochs=30, batch_size=4, validation_data=(X_test, y_test))
+
         print("\nTrain data:")
         results  = model.evaluate(X_train, y_train)
         model_info["train_evaluation"] = results
@@ -138,3 +160,10 @@ class SpeakatoTrainer:
 
         onnx_model, _ = tf2onnx.convert.from_keras(model)
         onnx.save_model(onnx_model, f"{model_path}/model.onnx")
+
+    def predict(self,X ):
+        Predict = np.array([nlp(x).vector for x in [X]])
+        y_predicted = model(Predict)
+        recognized_index = y_predicted[0].numpy().tolist().index(max(y_predicted[0]))
+
+        return recognized_index
