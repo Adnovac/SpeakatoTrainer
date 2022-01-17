@@ -24,10 +24,17 @@ open
 close
 alarm
 ```
-An example dataset has been placed in ```examples\polish_commands_dataset```
+Sample datasets have been included in ```examples\```
 
 ## How to use?
 Prepare dataset, run ```python src\main.py``` and pass necessary arguments. That's all!
+
+Example usage with flags:
+```python src/main.py --language pl --dataset .\examples\polish_commands_dataset\ --model .\models\test --mode 1```
+
+Available modes:
+- 1 - Create new model
+- 2 - Add new data to previously created model
 
 ## How to test trained model?
 You can use predefined methods from ```src\Sandbox.ipynb``` to test your model. 
