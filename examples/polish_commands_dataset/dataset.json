@@ -136,6 +136,66 @@
         "command": "alarm"
     },
     {
+        "text": "Dodaj wydarzenie do kalendarza",
+        "command": "calendar"
+    },
+    {
+        "text": "Dodaj nowe wydarzenie na piętnastego marca",
+        "command": "calendar"
+    },
+    {
+        "text": "Usuń wydarzenie z kalendarza",
+        "command": "calendar"
+    },
+    {
+        "text": "Usuń wszystkie wydarzenia z kalendarza",
+        "command": "calendar"
+    },
+    {
+        "text": "Wyczyść mój kalendarz",
+        "command": "calendar"
+    },
+    {
+        "text": "Jakie jest najbliższe wydarzenie w moim kalendarzu?",
+        "command": "calendar"
+    },
+    {
+        "text": "Ile dni zostało do najbliższego wydarzania w moim kalendarzu?",
+        "command": "calendar"
+    },
+    {
+        "text": "Zmień datę wydarzenia",
+        "command": "calendar"
+    },
+    {
+        "text": "Zmień godzinę wydarzenia",
+        "command": "calendar"
+    },
+    {
+        "text": "Zmień lokację wydarzenia",
+        "command": "calendar"
+    },
+    {
+        "text": "Przypomnij mi o praniu za godzinę",
+        "command": "reminder"
+    },
+    {
+        "text": "Przypomnij mi o nakarmieniu psa za trzydzieści minut",
+        "command": "reminder"
+    },
+    {
+        "text": "Dodaj nowe przypomnienie",
+        "command": "reminder"
+    },
+    {
+        "text": "Usuń wszystkie przypomnienia",
+        "command": "reminder"
+    },
+    {
+        "text": "Przypomnij mi o wyczyszczeniu zmywarki za dwie godziny",
+        "command": "reminder"
+    },
+    {
         "text": "Zrób notatkę",
         "command": "write"
     },
