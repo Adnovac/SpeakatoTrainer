@@ -1,18 +1,258 @@
 [
     {
+        "text": "Good morning",
+        "command": "greeting"
+    },
+    {
+        "text": "Good evening",
+        "command": "greeting"
+    },
+    {
+        "text": "Hi",
+        "command": "greeting"
+    },
+    {
+        "text": "Hey",
+        "command": "greeting"
+    },
+    {
+        "text": "Sup",
+        "command": "greeting"
+    },
+    {
+        "text": "Howdy",
+        "command": "greeting"
+    },
+    {
+        "text": "Welcome",
+        "command": "greeting"
+    },
+    {
         "text": "Hello",
         "command": "greeting"
     },
     {
-        "text": "Open the spotify app",
+        "text": "What's up",
+        "command": "greeting"
+    },
+    {
+        "text": "Yo",
+        "command": "greeting"
+    },
+    {
+        "text": "How are you",
+        "command": "greeting"
+    },
+    {
+        "text": "Open Spotify",
         "command": "open"
     },
     {
-        "text": "Close the window",
+        "text": "Open game",
+        "command": "open"
+    },
+    {
+        "text": "Open task manager",
+        "command": "open"
+    },
+    {
+        "text": "Open command prompt",
+        "command": "open"
+    },
+    {
+        "text": "Open command line",
+        "command": "open"
+    },
+    {
+        "text": "Open chrome",
+        "command": "open"
+    },
+    {
+        "text": "Open notes",
+        "command": "open"
+    },
+    {
+        "text": "Open the web",
+        "command": "open"
+    },
+    {
+        "text": "Open browser",
+        "command": "open"
+    },
+    {
+        "text": "Turn on calculator",
+        "command": "open"
+    },
+    {
+        "text": "Open calculator",
+        "command": "open"
+    },
+    {
+        "text": "Open control panel",
+        "command": "open"
+    },
+    {
+        "text": "Open system settings",
+        "command": "open"
+    },
+    {
+        "text": "Open gallery",
+        "command": "open"
+    },
+    {
+        "text": "Close window",
         "command": "close"
     },
     {
-        "text": "Set an alarm on 5 o'clock",
+        "text": "Close folder",
+        "command": "close"
+    },
+    {
+        "text": "Close file",
+        "command": "close"
+    },
+    {
+        "text": "Close the app",
+        "command": "close"
+    },
+    {
+        "text": "Close app",
+        "command": "close"
+    },
+    {
+        "text": "Set the alarm to eight o'clock",
         "command": "alarm"
+    },
+    {
+        "text": "Wake me up at eight o'clock",
+        "command": "alarm"
+    },
+    {
+        "text": "Set the alarm to seventeen hundred",
+        "command": "alarm"
+    },
+    {
+        "text": "Set alarm to ten AM",
+        "command": "alarm"
+    },
+    {
+        "text": "Set the alarm to nine",
+        "command": "alarm"
+    },
+    {
+        "text": "Add event to calendar",
+        "command": "calendar"
+    },
+    {
+        "text": "Add new event on March fifteen",
+        "command": "calendar"
+    },
+    {
+        "text": "Remove event from calendar",
+        "command": "calendar"
+    },
+    {
+        "text": "Remove all events from my calendar",
+        "command": "calendar"
+    },
+    {
+        "text": "Clear my calendar",
+        "command": "calendar"
+    },
+    {
+        "text": "What's the next event in my calendar",
+        "command": "calendar"
+    },
+    {
+        "text": "How many days are there till the next event in my calendar",
+        "command": "calendar"
+    },
+    {
+        "text": "ZChange event date",
+        "command": "calendar"
+    },
+    {
+        "text": "Change event time",
+        "command": "calendar"
+    },
+    {
+        "text": "Change event location",
+        "command": "calendar"
+    },
+    {
+        "text": "remind me about the laundry in an hour",
+        "command": "reminder"
+    },
+    {
+        "text": "Remind me to feed the dog in thirty minutes",
+        "command": "reminder"
+    },
+    {
+        "text": "Set new reminder",
+        "command": "reminder"
+    },
+    {
+        "text": "Remove all reminders",
+        "command": "reminder"
+    },
+    {
+        "text": "Remind me to clean the dishwasher in three hours",
+        "command": "reminder"
+    },
+    {
+        "text": "Make a note",
+        "command": "write"
+    },
+    {
+        "text": "Note",
+        "command": "write"
+    },
+    {
+        "text": "Write text",
+        "command": "write"
+    },
+    {
+        "text": "Write the command in terminal",
+        "command": "write"
+    },
+    {
+        "text": "Save file",
+        "command": "save"
+    },
+    {
+        "text": "Save the file",
+        "command": "save"
+    },
+    {
+        "text": "Save changes",
+        "command": "save"
+    },
+    {
+        "text": "Confirm changes",
+        "command": "save"
+    },
+    {
+        "text": "Overwrite file",
+        "command": "save"
+    },
+    {
+        "text": "Create new file",
+        "command": "create"
+    },
+    {
+        "text": "Create new folder",
+        "command": "create"
+    },
+    {
+        "text": "Enter folder",
+        "command": "cd"
+    },
+    {
+        "text": "Open folder",
+        "command": "cd"
+    },
+    {
+        "text": "Return to folder",
+        "command": "cd"
     }
 ]

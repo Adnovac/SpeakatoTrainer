@@ -2,6 +2,8 @@ greeting
 open
 close
 alarm
+calendar
+reminders
 write
 save
 create
