@@ -281,18 +281,18 @@
     },
     {
         "text": "Enter folder",
-        "command": "cd"
+        "command": "open"
     },
     {
         "text": "Open folder",
-        "command": "cd"
+        "command": "open"
     },
     {
         "text": "Return to folder",
-        "command": "cd"
+        "command": "open"
     },
     {
         "text": "Go to drive C",
-        "command": "cd"
+        "command": "open"
     }
 ]

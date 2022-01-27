@@ -8,4 +8,3 @@ write
 save
 system
 create
-cd

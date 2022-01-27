@@ -285,18 +285,18 @@
     },
     {
         "text": "Wejdź do folderu",
-        "command": "cd"
+        "command": "open"
     },
     {
         "text": "Otwórz folder",
-        "command": "cd"
+        "command": "open"
     },
     {
         "text": "Wróć do folderu",
-        "command": "cd"
+        "command": "open"
     },
     {
         "text": "Wejdź na dysk C",
-        "command": "cd"
+        "command": "open"
     }
 ]

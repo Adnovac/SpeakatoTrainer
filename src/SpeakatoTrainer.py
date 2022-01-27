@@ -82,6 +82,8 @@ class SpeakatoTrainer:
         global X_test
         global y_train
         global y_test
+        global X
+        global y
 
         with open(f"{dataset_path}/commands.txt", "r") as f:
             labels = sorted([x.rstrip("\n") for x in f.readlines()])
@@ -138,6 +140,7 @@ class SpeakatoTrainer:
             model = self.load_model()
 
         model.fit(X_train,y_train, epochs=30, batch_size=4, validation_data=(X_test, y_test))
+        model.fit(X, y, epochs=3, batch_size=4, validation_data=(X, y))
 
         print("\nTrain data:")
         results  = model.evaluate(X_train, y_train)
