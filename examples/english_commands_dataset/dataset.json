@@ -236,6 +236,26 @@
         "command": "save"
     },
     {
+        "text": "Set volume to 20 percent",
+        "command": "system"
+    },
+    {
+        "text": "Set volume to 100 percent",
+        "command": "system"
+    },
+    {
+        "text": "Mute volume",
+        "command": "system"
+    },
+    {
+        "text": "Turn on night light",
+        "command": "system"
+    },
+    {
+        "text": "Turn off night light",
+        "command": "system"
+    },
+    {
         "text": "Create new file",
         "command": "create"
     },
