@@ -232,6 +232,26 @@
         "command": "save"
     },
     {
+        "text": "Ustaw głośność na 20 procent",
+        "command": "system"
+    },
+    {
+        "text": "Ustaw głośność na 100 procent",
+        "command": "system"
+    },
+    {
+        "text": "Wycisz głośność",
+        "command": "system"
+    },
+    {
+        "text": "Włącz tryb nocnego oświetlenia",
+        "command": "system"
+    },
+    {
+        "text": "Wyłącz tryb nocnego oświetlenia",
+        "command": "system"
+    },
+    {
         "text": "Utwórz nowy plik",
         "command": "create"
     },
