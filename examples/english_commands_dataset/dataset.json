@@ -100,6 +100,14 @@
         "command": "open"
     },
     {
+        "text": "Start the stopwatch",
+        "command": "open"
+    },
+    {
+        "text": "Open microsoft word",
+        "command": "open"
+    },
+    {
         "text": "Close window",
         "command": "close"
     },
@@ -117,6 +125,10 @@
     },
     {
         "text": "Close app",
+        "command": "close"
+    },
+    {
+        "text": "Close web browser",
         "command": "close"
     },
     {
@@ -256,6 +268,10 @@
         "command": "system"
     },
     {
+        "text": "Search in the system",
+        "command": "system"
+    },
+    {
         "text": "Create new file",
         "command": "create"
     },
@@ -273,6 +289,10 @@
     },
     {
         "text": "Return to folder",
+        "command": "cd"
+    },
+    {
+        "text": "Go to drive C",
         "command": "cd"
     }
 ]
