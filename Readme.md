@@ -1,4 +1,8 @@
 # Speakato Trainer
+Speakato Trainer is a project used to create models conforming to the requirements of [Speakato](https://github.com/Adnovac/Speakato). 
+
+Write down the desired commands, prepare dataset and Speakato will do the rest.
+
 ## Prerequisites
 Before you start don't forget to install necessary packages:
 ```powershell
