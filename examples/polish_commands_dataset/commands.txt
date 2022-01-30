@@ -1,10 +1,10 @@
-greeting
-open
-close
 alarm
 calendar
+close
+create
+greeting
+open
 reminders
-write
 save
 system
-create
+write

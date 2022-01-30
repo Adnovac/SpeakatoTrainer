@@ -84,6 +84,10 @@
         "command": "open"
     },
     {
+        "text": "Uruchom aplikacje",
+        "command": "open"
+    },
+    {
         "text": "Otwórz panel sterowania",
         "command": "open"
     },

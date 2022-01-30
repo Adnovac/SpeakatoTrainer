@@ -91,13 +91,14 @@ class SpeakatoTrainer:
         data["text"] = self.clean_data(data["text"])
         X = np.array([nlp(x).vector for x in data["text"]])
         y = pd.get_dummies(data[["command"]]).values
+
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, shuffle=True)
         model_info["token_len"] = len(X_train[0])
 
 
     def clean_data(self, texts:list):
         """
-        Constructs a new SpeakatoTrainer
+        Cleans text array by using lemmas, stopwords and lowering text
         :param texts: list of sentences in form of strings.
         """
         final_texts = list()
