@@ -141,3 +141,4 @@ cython_debug/
 datasets/*
 dataset/*
 models/*
+speakato/*

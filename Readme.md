@@ -1,8 +1,9 @@
 # Speakato Trainer
-Speakato Trainer is a project used to create models conforming to the requirements of [Speakato](https://github.com/Adnovac/Speakato). 
+Speakato Trainer is a project used to create models conforming to the requirements of [Speakato](https://github.com/Adnovac/Speakato).
 
 Write down the desired commands, prepare dataset and Speakato will do the rest.
 
+> **WARNING**:  Only **Windows** is supported!
 ## Prerequisites
 Before you start don't forget to install necessary packages:
 ```powershell
@@ -10,6 +11,7 @@ pip install -r requirements.txt
 python -m spacy download pl_core_news_sm
 python -m spacy download en_core_web_sm
 ```
+...or use ```setup.cmd``` to configure virutal environment with all required packages and modules!
 
 ## How to build training dataset?
 Put the list of commands along with it's labels in the ```dataset.json```. Data should be saved in the following form:
@@ -41,4 +43,4 @@ Available modes:
 - 2 - Add new data to previously created model
 
 ## How to test trained model?
-You can use predefined methods from ```src\Sandbox.ipynb``` to test your model. 
+You can use predefined methods from ```src\Sandbox.ipynb``` to test your model.
