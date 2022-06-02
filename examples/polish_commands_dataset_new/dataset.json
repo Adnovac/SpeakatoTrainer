@@ -1,0 +1,330 @@
+[
+    {
+        "text": "Dzień dobry",
+        "command": "greeting"
+    },
+    {
+        "text": "Dobry wieczór",
+        "command": "greeting"
+    },
+    {
+        "text": "Cześć",
+        "command": "greeting"
+    },
+    {
+        "text": "Hej",
+        "command": "greeting"
+    },
+    {
+        "text": "Siema",
+        "command": "greeting"
+    },
+    {
+        "text": "Elo, co tam",
+        "command": "greeting"
+    },
+    {
+        "text": "Witaj",
+        "command": "greeting"
+    },
+    {
+        "text": "Witam",
+        "command": "greeting"
+    },
+    {
+        "text": "Czołem",
+        "command": "greeting"
+    },
+    {
+        "text": "Joł",
+        "command": "greeting"
+    },
+    {
+        "text": "Jak się masz",
+        "command": "greeting"
+    },
+    {
+        "text": "Żółwik",
+        "command": "greeting"
+    },
+    {
+        "text": "Kopę lat",
+        "command": "greeting"
+    },
+    {
+        "text": "Graba",
+        "command": "greeting"
+    },
+    {
+        "text": "Witka",
+        "command": "greeting"
+    },
+    {
+        "text": "Strzała",
+        "command": "greeting"
+    },
+    {
+        "text": "Jak się masz",
+        "command": "greeting"
+    },
+    {
+        "text": "Co u Ciebie słychać",
+        "command": "greeting"
+    },
+    {
+        "text": "Siema",
+        "command": "greeting"
+    },
+    {
+        "text": "Miło Cię widzieć",
+        "command": "greeting"
+    },
+    {
+        "text": "Trzymaj się",
+        "command": "greeting"
+    },
+    {
+        "text": "Miłego dnia",
+        "command": "greeting"
+    },
+    {
+        "text": "Piątka",
+        "command": "greeting"
+    },
+    {
+        "text": "Piąteczka",
+        "command": "greeting"
+    },
+    {
+        "text": "Przybij piątkę",
+        "command": "greeting"
+    },
+    {
+        "text": "Otwórz aplikację spotify",
+        "command": "open"
+    },
+    {
+        "text": "Włącz spotify",
+        "command": "open"
+    },
+    {
+        "text": "Uruchom spotify",
+        "command": "open"
+    },
+    {
+        "text": "Uruchom grę",
+        "command": "open"
+    },
+    {
+        "text": "Otwórz menadżera zadań",
+        "command": "open"
+    },
+    {
+        "text": "Uruchom wiersz poleceń",
+        "command": "open"
+    },
+    {
+        "text": "Włącz chrome",
+        "command": "open"
+    },
+    {
+        "text": "Otwórz notatnik",
+        "command": "open"
+    },
+    {
+        "text": "Otwórz panel sterowania",
+        "command": "open"
+    },
+    {
+        "text": "Włącz mi aplikacje notatnik",
+        "command": "open"
+    },
+    {
+        "text": "Uruchom przeglądarkę",
+        "command": "open"
+    },
+    {
+        "text": "Uruchom kalkulator",
+        "command": "open"
+    },
+    {
+        "text": "Włącz office",
+        "command": "open"
+    },
+    {
+        "text": "Odpal kalkulator",
+        "command": "open"
+    },
+    {
+        "text": "Otwórz dokument w office",
+        "command": "open"
+    },
+    {
+        "text": "Włącz visual studio",
+        "command": "open"
+    },
+    {
+        "text": "Odpal grę",
+        "command": "open"
+    },
+    {
+        "text": "Włącz steam",
+        "command": "open"
+    },
+    {
+        "text": "Uruchom aplikacje",
+        "command": "open"
+    },
+    {
+        "text": "Otwórz panel sterowania",
+        "command": "open"
+    },
+    {
+        "text": "Otwórz ustawienia systemu",
+        "command": "open"
+    },
+    {
+        "text": "Otwórz galerię zdjęć",
+        "command": "open"
+    },
+    {
+        "text": "Uruchom teams",
+        "command": "open"
+    },
+    {
+        "text": "Uruchom stoper",
+        "command": "open"
+    },
+    {
+        "text": "Otwórz worda",
+        "command": "open"
+    },
+    {
+        "text": "Wejdź do folderu",
+        "command": "open"
+    },
+    {
+        "text": "Otwórz folder",
+        "command": "open"
+    },
+    {
+        "text": "Wróć do folderu",
+        "command": "open"
+    },
+    {
+        "text": "Wejdź na dysk C",
+        "command": "open"
+    },
+    {
+        "text": "Wejdź na dysk D",
+        "command": "open"
+    },
+    {
+        "text": "Utwórz nowy plik",
+        "command": "create"
+    },
+    {
+        "text": "Utwórz nowy folder",
+        "command": "create"
+    },
+    {
+        "text": "Stwórz nowy plik",
+        "command": "create"
+    },
+    {
+        "text": "Stwórz nowy folder",
+        "command": "create"
+    },
+    {
+        "text": "Stwórz nowy katalog",
+        "command": "create"
+    },
+    {
+        "text": "Stwórz nowy projekt",
+        "command": "create"
+    },
+    {
+        "text": "Utwórz nowy projekt",
+        "command": "create"
+    },
+    {
+        "text": "Stwórz nowy dokument tekstowy",
+        "command": "create"
+    },
+    {
+        "text": "Stwórz nowy arkusz",
+        "command": "create"
+    },
+    {
+        "text": "Zamknij okno",
+        "command": "close"
+    },
+    {
+        "text": "Zamknij kartę",
+        "command": "close"
+    },
+    {
+        "text": "Zamknij wszystkie aplikacje",
+        "command": "close"
+    },
+    {
+        "text": "Zamknij wszystkie programy",
+        "command": "close"
+    },
+    {
+        "text": "Zamknij steama",
+        "command": "close"
+    },
+    {
+        "text": "Zamknij spotify",
+        "command": "close"
+    },
+    {
+        "text": "Zamknij folder",
+        "command": "close"
+    },
+    {
+        "text": "Zamknij katalog",
+        "command": "close"
+    },
+    {
+        "text": "Zamknij ten plik",
+        "command": "close"
+    },
+    {
+        "text": "Zamknij aplikację",
+        "command": "close"
+    },
+    {
+        "text": "Zamknij grę",
+        "command": "close"
+    },
+    {
+        "text": "Zakończ proces",
+        "command": "close"
+    },
+    {
+        "text": "Zakończ wszystkie procesy",
+        "command": "close"
+    },
+    {
+        "text": "Zamknij przeglądarkę",
+        "command": "close"
+    },
+    {
+        "text": "Zakończ działanie programu",
+        "command": "close"
+    },
+    {
+        "text": "Zakończ działanie aplikacji",
+        "command": "close"
+    },
+    {
+        "text": "Wyłącz visual studio",
+        "command": "close"
+    },
+    {
+        "text": "Wyłącz aplikację",
+        "command": "close"
+    }
+]
